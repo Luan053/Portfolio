@@ -9,6 +9,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --purple: #7a3db8;
   --darkpurple: #623193;
@@ -98,13 +102,14 @@ body {
 }
 
 header {
-  position: sticky;
+  position: absolute;
+  width: 100%;
   top: 0;
   z-index: 10;
   background: var(--dkblue);
 }
 
-header .navigation {
+header #navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,17 +118,17 @@ header .navigation {
   transition: all 0.3s;
 }
 
-header .navigation .logo-name {
+header #navigation .logo-name {
   color: var(--purple);
   font-size: 1.7rem;
   font-weight: 600;
 }
 
-header .navigation .logo-name span {
+header #navigation .logo-name span {
   color: var(--white);
 }
 
-header .navigation .nav-menu {
+header #navigation .nav-menu {
   display: none;
   align-items: center;
   justify-content: center;
@@ -139,7 +144,7 @@ header .navigation .nav-menu {
   backdrop-filter: blur(10px);
 }
 
-header .navigation .nav-menu .nav-item a {
+header #navigation .nav-menu .nav-item a {
   color: var(--white);
   font-size: 25px;
   font-weight: 500;
@@ -147,16 +152,16 @@ header .navigation .nav-menu .nav-item a {
   padding: 10px;
 }
 
-header .navigation .nav-menu .nav-item a:hover {
+header #navigation .nav-menu .nav-item a:hover {
   font-size: 30px;
   font-weight: 700;
 }
 
-header .navigation .menu {
+header #navigation .menu {
   cursor: pointer;
 }
 
-header .navigation .menu .bar {
+header #navigation .menu .bar {
   display: block;
   width: 28px;
   height: 3px;
@@ -176,13 +181,14 @@ header .navigation .menu .bar {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-header .navigation .nav-menu.ativo {
+header #navigation .nav-menu.ativo {
   display: flex;
 }
 
 /* Home */
 
 main .home {
+  margin-top: 50px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -204,6 +210,7 @@ main .home .home-text .text-h1 {
 
 main .home .home-text .text-p-1 {
   margin-bottom: 2rem;
+  color: var(--lightgray);
 }
 
 main .home .home-text .text-p-2 {
@@ -257,13 +264,13 @@ main .home .home-text .home-btn:hover {
 
 /* Sobre */
 
-main .about {
+main #about {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-main .about .about-text {
+main #about .about-text {
   background: var(--dkblue);
   padding: 3% 5%;
   width: 90%;
@@ -271,7 +278,7 @@ main .about .about-text {
   margin-bottom: 30px;
 }
 
-main .about .about-text .text-h1,
+main #about .about-text .text-h1,
 .text-p {
   color: var(--white);
   text-align: center;
@@ -282,22 +289,22 @@ main .about .about-text .text-h1,
   color: var(--lightgray);
 }
 
-main .habilities {
+main #habilities {
   color: var(--white);
   text-align: center;
 }
 
-main .habilities .cards-container,
-.projects .projects-container {
+main #habilities .cards-container,
+#projects .projects-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   padding: 3% 5%;
   flex-wrap: wrap;
 }
 
-main .habilities .cards-container .card {
+main #habilities .cards-container .card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -311,38 +318,43 @@ main .habilities .cards-container .card {
   transition: all 0.3s;
 }
 
-main .habilities .cards-container .card:hover {
+main #habilities .cards-container .card:hover {
   transform: scale(1.1);
 }
 
-main .habilities .cards-container .card .icon {
+main #habilities .cards-container .card .icon {
   width: 180px;
   height: 180px;
   display: flex;
   align-items: center;
 }
 
-main .habilities .cards-container .card img {
+main #habilities .cards-container .card img {
   width: 100%;
 }
 
 @media (max-width: 600px) {
-  main .habilities .cards-container {
+  main #habilities .cards-container,
+  .projects-container {
     flex-direction: column;
     justify-content: center;
     margin-top: 30px;
   }
 }
 
-.projects {
+#projects {
   text-align: center;
   color: var(--white);
+  background: var(--dkblue);
+  margin: 30px;
+  padding-top: 30px;
+  border-radius: 10px;
 }
-.projects .projects-container {
+#projects .projects-container {
   gap: 30px;
 }
 
-.projects .projects-container .project a i {
+#projects .projects-container .project a i {
   font-size: 3rem;
   user-select: none;
   color: transparent;
@@ -358,22 +370,79 @@ main .habilities .cards-container .card img {
   transition: all 0.2s;
 }
 
-.projects .projects-container .project i:hover {
+#projects .projects-container .project i:hover {
   backdrop-filter: brightness(30%);
   color: var(--white);
 }
 
-.projects .projects-container .project {
+#projects .projects-container .project {
   width: 300px;
   transition: all 0.3s;
+  user-select: none;
 }
 
-.projects .projects-container .project:hover {
+#projects .projects-container .project:hover {
   transform: scale(1.05);
 }
 
-.projects .projects-container .project a img {
+#projects .projects-container .project img {
   width: 100%;
   margin-top: 10px;
   cursor: pointer;
+}
+
+footer {
+  background: var(--dkblue);
+  margin-top: 50px;
+}
+
+footer .footer-container {
+  text-align: center;
+  color: var(--white);
+  padding: 3rem 1.5rem;
+}
+
+footer .footer-container .links {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
+footer .footer-container .links a i {
+  color: var(--white);
+  font-size: 1.8rem;
+}
+
+footer .footer-container .links a p {
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+footer .footer-container .links a {
+  transition: all 0.3s;
+}
+
+footer .footer-container .links a:hover {
+  transform: scale(1.1);
+}
+
+.back {
+  position: fixed;
+  z-index: 200;
+  bottom: 20px;
+  right: 10px;
+}
+
+.back a {
+  background: #37375b;
+  border-radius: 100%;
+  padding: 20px 16px 10px 16px;
+}
+
+.back a i {
+  font-size: 1.8rem;
+  color: var(--white);
 }

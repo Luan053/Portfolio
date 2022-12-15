@@ -16,14 +16,20 @@
 </head>
 
 <body>
+    <div class="back">
+        <a href="#navigation">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
     <header>
-        <nav class="navigation">
-            <a href="#" class="logo-name">L<span>uan</span></a>
+        <nav id="navigation">
+            <a href="" class="logo-name">L<span>uan</span></a>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#">Home</a></li>
-                <li class="nav-item"><a href="#">Sobre</a></li>
-                <li class="nav-item"><a href="#">Projetos</a></li>
-                <li class="nav-item"><a href="#">Contato</a></li>
+
+                <li class="nav-item"><a href="#about">Sobre</a></li>
+                <li class="nav-item"><a href="#habilities">Conhecimentos</a></li>
+                <li class="nav-item"><a href="#projects">Projetos</a></li>
+                <li class="nav-item"><a href="#footer">Contato</a></li>
             </ul>
             <div class="menu">
                 <span class="bar"></span>
@@ -32,6 +38,7 @@
             </div>
         </nav>
     </header>
+
     <main>
         <section class="home">
             <div class="home-text">
@@ -47,7 +54,7 @@
                     CURSANDO ANÁLISE E DESENVOLVIMENTO DE SISTEMAS, TENHO EXPERIÊNCIA EM
                     DESENVOLVIMENTO WEB (REACT, TAILWIND E OUTROS).
                 </p>
-                <a class="home-btn" href="#">
+                <a class="home-btn" href="#about">
                     <span>
                         SAIBA MAIS
                     </span>
@@ -59,7 +66,8 @@
             </div>
         </section>
 
-        <section class="about">
+
+        <section id="about">
             <div class="about-text">
                 <h1 class="text-h1">Sobre</h1>
                 <p class="text-p">Desenvolvedor front-end cursando o 3º semestre de ADS, possuo
@@ -71,7 +79,7 @@
             </div>
         </section>
 
-        <section class="habilities">
+        <section id="habilities">
             <h1>Conhecimentos</h1>
             <div class="cards-container">
                 <div class="card">
@@ -107,49 +115,64 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section id="projects">
             <h1>Projetos</h1>
             <div class="projects-container">
                 <div class="project">
                     <h4>Portifólio</h4>
-                    <a href="">
+                    <a target="_blank" href="https://github.com/Luan053/Portifolio">
                         <i class="fa-brands fa-github"></i>
                         <img src="./assets/projetos/portifolio.png" alt="">
                     </a>
                 </div>
                 <div class="project">
                     <h4>Animeflix</h4>
-                    <a href="">
+                    <a target="_blank" href="https://github.com/Luan053/AnimeFlix">
                         <i class="fa-brands fa-github"></i>
                         <img src="./assets/projetos/animeflix.png" alt="">
                     </a>
                 </div>
                 <div class="project">
                     <h4>Instagram Login Page</h4>
-                    <a href="">
+                    <a target="_blank" href="https://github.com/Luan053/Landing-Page-Instagram">
                         <i class="fa-brands fa-github"></i>
                         <img src="./assets/projetos/instalogin.png" alt="">
                     </a>
                 </div>
                 <div class="project">
                     <h4>Snake Game</h4>
-                    <a href="">
+                    <a target="_blank" href="https://github.com/Luan053/SnakeGame-JS">
                         <i class="fa-brands fa-github"></i>
                         <img src="./assets/projetos/snakegame.png" alt="">
                     </a>
                 </div>
                 <div class="project">
                     <h4>Em Breve</h4>
-                    <a href="">
-                        <img src="./assets/projetos/breve.png" alt="">
-                    </a>
+                    <img src="./assets/projetos/breve.png" alt="">
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer id="footer">
+        <div class="footer-container">
+            <h1>Contato</h1>
+            <div class="links">
+                <a target="_blank" href="https://github.com/Luan053">
+                    <i class="fa-brands fa-github"></i>
+                    <p>GitHub</p>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/luanrs-/">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <p>LinkedIn</p>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/rs_luan/">
+                    <i class=" fa-brands fa-instagram"></i>
+                    <p>Instagram</p>
+                </a>
 
+            </div>
+        </div>
     </footer>
 
     <script src="./js/menu.js"></script>
