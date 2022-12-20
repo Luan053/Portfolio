@@ -12,6 +12,9 @@
     <!-- CSS links -->
     <link rel="stylesheet" href="./css/style.css">
 
+    <!-- Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Portifólio</title>
 </head>
 
@@ -41,7 +44,7 @@
 
     <main>
         <section class="home">
-            <div class="home-text">
+            <div data-aos="fade-right" class="home-text">
                 <h1 class="text-h1">
                     OLÁ 👋
                     <br>
@@ -61,7 +64,7 @@
                     <i class="fa-solid fa-circle-arrow-down"></i>
                 </a>
             </div>
-            <div class="home-img">
+            <div data-aos="fade-left" class="home-img">
                 <img class="img-perfil" src="./assets/ImgPerfil.svg" alt="Imagem Perfil">
             </div>
         </section>
@@ -70,7 +73,7 @@
         <section id="about">
             <div class="about-text">
                 <h1 class="text-h1">Sobre</h1>
-                <p class="text-p">Desenvolvedor front-end cursando o 3º semestre de ADS, possuo
+                <p data-aos="fade-up" class="text-p">Desenvolvedor front-end cursando o 3º semestre de ADS, possuo
                     experiência em React.js, JavaScript, Tailwind CSS, Bootstrap, HTML5 e CSS3.
                     Conheci a programação em 2021 e foi amor a primeira vista, porém por contratempos, só pude realmente
                     começar a estudar em junho de 2022, e dês de lá, tenho dedicado boa parte do meu tempo a essa arte
@@ -82,7 +85,7 @@
         <section id="habilities">
             <h1>Conhecimentos</h1>
             <div class="cards-container">
-                <div class="card">
+                <div data-aos="zoom-in-right" class=" card">
                     <div class="icon">
                         <img src="./assets/logos/LogoJS.svg" alt="JavaScript">
                     </div>
@@ -90,21 +93,21 @@
                     <span>JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível
                         com tipagem dinâmica fraca e multiparadigma.</span>
                 </div>
-                <div class="card">
+                <div data-aos="fade-up-right" class="card">
                     <div class="icon">
                         <img src="./assets/logos/logoHTML.svg" alt="html">
                     </div>
                     <h3>HTML</h3>
                     <span>HTML é uma linguagem de marcação utilizada na construção de páginas na Web.</span>
                 </div>
-                <div class="card">
+                <div data-aos="fade-up-left" class="card">
                     <div class="icon">
                         <img src="./assets/logos/LogoCSS.svg" alt="css">
                     </div>
                     <h3>CSS</h3>
                     <span>Cascading Style Sheets é um mecanismo para adicionar estilo a um documento web.</span>
                 </div>
-                <div class="card">
+                <div data-aos="fade-up-left" class="card">
                     <div class="icon">
                         <img src="./assets/logos/LogoTailwind.svg" alt="Tailwind">
                     </div>
@@ -117,7 +120,7 @@
 
         <section id="projects">
             <h1>Projetos</h1>
-            <div class="projects-container">
+            <div data-aos="fade-up" class="projects-container">
                 <div class="project">
                     <h4>Portifólio</h4>
                     <a target="_blank" href="https://github.com/Luan053/Portifolio">
@@ -177,6 +180,10 @@
 
     <script src="./js/menu.js"></script>
     <script src="./js/vanilla-tilt.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script>
         VanillaTilt.init(document.querySelectorAll(".img-perfil"));
     </script>
